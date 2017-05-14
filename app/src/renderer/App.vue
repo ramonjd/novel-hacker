@@ -1,19 +1,22 @@
 <template>
   <div id="app">
+    <NavMenu></NavMenu>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
   import store from 'renderer/vuex/store';
+  import NavMenu from './components/Navigation/NavMenu';
   export default {
     store,
+    components: {
+      NavMenu
+    },
   };
 </script>
 
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Lato:300);
-
   * {
     margin: 0;
     padding: 0;
@@ -23,17 +26,10 @@
   body { height: 100%; }
 
   body {
-    align-items: center;
-    background:
-      radial-gradient(
-        ellipse at center,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(229, 229, 229, .85) 100%
-      );
-    background-position: center;
-    display: flex;
-    font-family: Lato, Helvetica, sans-serif;
-    justify-content: center;
-    text-align: center;
+    animation: fadein 1s;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 </style>

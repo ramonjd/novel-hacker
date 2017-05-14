@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <section class="section">
+    <progress class="progress" value="15" max="100">15%</progress>
     <h1>Editor</h1>
     <button @click="incrementMain">+</button>
     <button @click="decrementMain">-</button>
@@ -9,7 +10,15 @@
         <textarea @keyup="incrementMain" class="textarea" placeholder="Textarea"></textarea>
       </p>
     </div>
-  </div>
+    <div class="field is-grouped">
+      <p class="control">
+        <button class="button is-primary">Submit</button>
+      </p>
+      <p class="control">
+        <button class="button is-link">Cancel</button>
+      </p>
+    </div>
+  </section>
 </template>
 
 <script>
