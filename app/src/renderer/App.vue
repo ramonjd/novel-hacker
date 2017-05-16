@@ -11,7 +11,7 @@
   export default {
     store,
     components: {
-      NavMenu
+      NavMenu,
     },
   };
 </script>

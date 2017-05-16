@@ -1,9 +1,14 @@
 import * as types from './mutation-types';
 
-export const decrementMain = ({ commit }) => {
-  commit(types.DECREMENT_MAIN_COUNTER);
+export const updateWordCount = ({ commit }, wordcount) => {
+  console.log(wordcount);
+  commit(types.UPDATE_WORD_COUNT, {
+    wordcount,
+  });
 };
 
-export const incrementMain = ({ commit }) => {
-  commit(types.INCREMENT_MAIN_COUNTER);
+export const updateCountdown = ({ commit }, countdown) => {
+  commit(types.UPDATE_COUNDOWN, {
+    countdown,
+  });
 };

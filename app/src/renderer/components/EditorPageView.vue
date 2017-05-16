@@ -2,12 +2,10 @@
   <section class="section">
     <progress class="progress" value="15" max="100">15%</progress>
     <h1>Editor</h1>
-    <button @click="incrementMain">+</button>
-    <button @click="decrementMain">-</button>
     <div class="field">
-      <label class="label">Message {{ mainCounter }}</label>
+      <label class="label">wordCount {{ wordCount }}</label>
       <p class="control">
-        <textarea @keyup="incrementMain" class="textarea" placeholder="Textarea"></textarea>
+        <textarea @keyup="updateWordCount" class="textarea" placeholder="Textarea"></textarea>
       </p>
     </div>
     <div class="field is-grouped">
@@ -24,17 +22,16 @@
 <script>
   import { mapGetters, mapActions } from 'vuex';
   export default {
-    beforeCreate () {
+    beforeCreate() {
       console.log(this.$store);
     },
     components: {},
     name: 'editor',
     computed: mapGetters([
-      'mainCounter',
+      'wordCount',
     ]),
     methods: mapActions([
-      'decrementMain',
-      'incrementMain',
+      'updateWordCount',
     ]),
   };
 </script>
