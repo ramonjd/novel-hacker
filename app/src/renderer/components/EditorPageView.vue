@@ -27,9 +27,12 @@
     },
     components: {},
     name: 'editor',
-    computed: mapGetters([
-      'wordCount',
-    ]),
+    computed: {
+        ...mapGetters([
+          'wordCount',
+        ]),
+        countdown () {}
+    },
     methods: mapActions([
       'updateWordCount',
     ]),
